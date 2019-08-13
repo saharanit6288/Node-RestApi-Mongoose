@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 mongoose.connect(
 	'mongodb://RanitSahaMongoUser:'+process.env.Mongo_Atlas_Pwd+'@cluster0-shard-00-00-gltdp.mongodb.net:27017,cluster0-shard-00-01-gltdp.mongodb.net:27017,cluster0-shard-00-02-gltdp.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority',
