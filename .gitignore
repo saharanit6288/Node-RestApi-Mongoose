@@ -12,8 +12,7 @@
 /build
 
 # api keys
-.env 
-nodemon.json
+.env
 
 # misc
 .DS_Store
