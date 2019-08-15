@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Order = require('../models/order');
 const Product = require('../models/product');
+require('dotenv').config();
 
 
 exports.get_all_orders = (req,res,next) => {
@@ -16,7 +17,7 @@ exports.get_all_orders = (req,res,next) => {
                     product: doc.product,
                     quantity: doc.quantity,
                     _id: doc._id,
-                    url: 'http://localhost:3000/orders/'+doc._id
+                    url: process.env.SITE_URL+'orders/'+doc._id
                 }
             })
         });
